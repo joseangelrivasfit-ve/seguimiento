@@ -1,12 +1,13 @@
 /* Diseño: una columna de móvil (máx. 560 px). Los colores de marca llegan desde config.js o la hoja Config
    a través de --brand-l / --brand-d (claro / oscuro). El resto de colores son fijos y seguros para ambos temas. */
+/* Diseño: una columna de móvil (máx. 560 px). Colores basados en tu paleta personalizada */
 :root {
-  --bg: #040A12;
-  --surface: #FFFFFF;
-  --surface-2: #CED2D6;
-  --ink: #14262A;
-  --muted: #566B6E;
-  --line: #D2DDDB;
+  --bg: #CED2D6;       /* Fondo claro general */
+  --surface: #FFFFFF;  /* Tarjetas y contenedores */
+  --surface-2: #E2E6E8;/* Superficie secundaria suave */
+  --ink: #040A12;      /* Texto principal muy oscuro para gran contraste */
+  --muted: #566B6E;    /* Texto secundario */
+  --line: #B5BCBE;     /* Líneas y bordes sutiles */
   --brand: var(--brand-l, #0F6B63);
   --brand-ink: var(--brand-l-ink, #FFFFFF);
   --ok: #1E8449;
@@ -19,14 +20,15 @@
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0D1A1C;
-    --surface: #142427;
-    --surface-2: #1A2E31;
-    --ink: #E5F0EE;
-    --muted: #93AAAC;
-    --line: #26393C;
+    --bg: #040A12;       /* Fondo oscuro principal (el más profundo de tu paleta) */
+    --surface: #0B1D33;  /* Tarjetas en azul noche para destacar sobre el fondo */
+    --surface-2: #122945;/* Elementos internos o estados hover */
+    --ink: #E5F0EE;      /* Texto claro para lectura cómoda */
+    --muted: #CED2D6;    /* Usamos tu gris #CED2D6 perfectamente para textos secundarios y subtítulos */
+    --line: #1E3A5F;     /* Líneas de separación basadas en tu tono azul */
     --brand: var(--brand-d, #4FD1C0);
     --brand-ink: var(--brand-d-ink, #072320);
     --ok: #4CC47F;
@@ -38,13 +40,14 @@
     color-scheme: dark;
   }
 }
+
 :root[data-theme="dark"] {
-  --bg: #0D1A1C;
-  --surface: #142427;
-  --surface-2: #1A2E31;
-  --ink: #E5F0EE;
-  --muted: #93AAAC;
-  --line: #26393C;
+  --bg: #040A12;       /* Fondo oscuro principal */
+  --surface: #0B1D33;  /* Tarjetas en azul noche */
+  --surface-2: #122945;/* Elementos internos */
+  --ink: #E5F0EE;      /* Texto claro */
+  --muted: #CED2D6;    /* Tu gris #CED2D6 para subtítulos */
+  --line: #1E3A5F;     /* Líneas y bordes */
   --brand: var(--brand-d, #4FD1C0);
   --brand-ink: var(--brand-d-ink, #072320);
   --ok: #4CC47F;
