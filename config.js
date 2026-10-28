@@ -6,7 +6,7 @@
  */
 window.APP_CONFIG = {
   // Dirección de tu Apps Script (termina en /exec). Si lo dejas vacío, la web funciona en MODO DEMO.
-  apiUrl: "",
+  apiUrl: "https://script.google.com/macros/s/AKfycbyOXmyjzXBHDdg54Vjnp4NrKGqhj9NFZPTu-qz3KNND2rjiRK8aph-JM957wShfJCn20g/exec",
 
   // Tu WhatsApp con código de país, sin + ni espacios.
   whatsapp: "584143539523",
