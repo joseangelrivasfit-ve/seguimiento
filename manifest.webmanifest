@@ -1,0 +1,13 @@
+{
+  "name": "Seguimiento de readaptación",
+  "short_name": "Seguimiento",
+  "description": "Tu programa de ejercicios y tu reporte diario.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ECF1F0",
+  "theme_color": "#0F6B63",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
