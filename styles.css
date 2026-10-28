@@ -1,12 +1,12 @@
 /* Diseño: una columna de móvil (máx. 560 px). Los colores de marca llegan desde config.js o la hoja Config
    a través de --brand-l / --brand-d (claro / oscuro). El resto de colores son fijos y seguros para ambos temas. */
 :root {
-  --bg: #CED2D6;        /* Fondo claro general */
-  --surface: #FFFFFF;  /* Tarjetas y contenedores */
-  --surface-2: #E2E6E8;/* Superficie secundaria suave */
-  --ink: #040A12;      /* Texto principal muy oscuro para gran contraste */
-  --muted: #566B6E;    /* Texto secundario */
-  --line: #B5BCBE;     /* Líneas y bordes sutiles */
+  --bg: #ECF1F0;
+  --surface: #FFFFFF;
+  --surface-2: #F3F7F6;
+  --ink: #14262A;
+  --muted: #566B6E;
+  --line: #D2DDDB;
   --brand: var(--brand-l, #0F6B63);
   --brand-ink: var(--brand-l-ink, #FFFFFF);
   --ok: #1E8449;
@@ -19,17 +19,16 @@
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
-
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #040A12;        /* Fondo oscuro principal */
-    --surface: #0B1D33;  /* Tarjetas en azul noche para destacar sobre el fondo */
-    --surface-2: #162C4A;/* Superficies internas y botones fantasma con mejor contraste */
-    --ink: #F1F5F9;      /* Texto principal casi blanco para máxima lectura */
-    --muted: #94A3B8;    /* Gris plateado brillante para textos secundarios y subtítulos */
-    --line: #2A4365;     /* Líneas de separación y bordes definidos */
-    --brand: var(--brand-d, #38BDF8); /* Azul brillante para darle vida a los botones y al icono */
-    --brand-ink: var(--brand-d-ink, #0B1D33);
+    --bg: #0D1A1C;
+    --surface: #142427;
+    --surface-2: #1A2E31;
+    --ink: #E5F0EE;
+    --muted: #93AAAC;
+    --line: #26393C;
+    --brand: var(--brand-d, #4FD1C0);
+    --brand-ink: var(--brand-d-ink, #072320);
     --ok: #4CC47F;
     --ok-soft: #14301F;
     --warn: #E6A93A;
@@ -39,16 +38,15 @@
     color-scheme: dark;
   }
 }
-
 :root[data-theme="dark"] {
-  --bg: #040A12;        /* Fondo oscuro principal */
-  --surface: #0B1D33;  /* Tarjetas en azul noche */
-  --surface-2: #162C4A;/* Elementos internos y botones fantasma */
-  --ink: #F1F5F9;      /* Texto claro */
-  --muted: #94A3B8;    /* Gris plateado brillante para subtítulos */
-  --line: #2A4365;     /* Líneas y bordes visibles */
-  --brand: var(--brand-d, #38BDF8); /* Azul brillante para marca / icono */
-  --brand-ink: var(--brand-d-ink, #0B1D33);
+  --bg: #0D1A1C;
+  --surface: #142427;
+  --surface-2: #1A2E31;
+  --ink: #E5F0EE;
+  --muted: #93AAAC;
+  --line: #26393C;
+  --brand: var(--brand-d, #4FD1C0);
+  --brand-ink: var(--brand-d-ink, #072320);
   --ok: #4CC47F;
   --ok-soft: #14301F;
   --warn: #E6A93A;
@@ -58,7 +56,7 @@
   color-scheme: dark;
 }
 
-- { box-sizing: border-box; }
+* { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -153,7 +151,7 @@ input[type="range"] { width: 100%; accent-color: var(--brand); height: 32px; mar
 
 .btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--brand); background: var(--brand); color: var(--brand-ink); font-weight: 600; font-size: 15px; text-decoration: none; cursor: pointer; text-align: center; }
 .btn:hover { filter: brightness(1.07); }
-.btn.ghost { background: var(--surface-2); color: var(--ink); border-color: var(--line); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn.wa { background: #1FA855; border-color: #1FA855; color: #fff; }
 
 /* Semáforo */
@@ -188,7 +186,7 @@ input[type="range"] { width: 100%; accent-color: var(--brand); height: 32px; mar
 .sec-title { font-size: 1rem; margin-bottom: 10px; }
 .chart { width: 100%; height: auto; display: block; }
 .chart .grid { stroke: var(--line); stroke-width: 1; }
-.chart .bar { fill: var(--brand); opacity: 0.9; } /* Barras con el azul brillante optimizado */
+.chart .bar { fill: var(--brand); opacity: 0.85; }
 .chart .line { fill: none; stroke: var(--bad); stroke-width: 2; stroke-linejoin: round; }
 .chart .line2 { fill: none; stroke: var(--warn); stroke-width: 2; stroke-dasharray: 5 4; stroke-linejoin: round; }
 .chart .dot { fill: var(--bad); }
