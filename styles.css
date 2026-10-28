@@ -1,9 +1,9 @@
 /* Diseño: una columna de móvil (máx. 560 px). Los colores de marca llegan desde config.js o la hoja Config
    a través de --brand-l / --brand-d (claro / oscuro). El resto de colores son fijos y seguros para ambos temas. */
 :root {
-  --bg: #ECF1F0;
+  --bg: #040A12;
   --surface: #FFFFFF;
-  --surface-2: #F3F7F6;
+  --surface-2: #CED2D6;
   --ink: #14262A;
   --muted: #566B6E;
   --line: #D2DDDB;
