@@ -1,8 +1,7 @@
 /* Diseño: una columna de móvil (máx. 560 px). Los colores de marca llegan desde config.js o la hoja Config
    a través de --brand-l / --brand-d (claro / oscuro). El resto de colores son fijos y seguros para ambos temas. */
-/* Diseño: una columna de móvil (máx. 560 px). Colores basados en tu paleta personalizada */
 :root {
-  --bg: #CED2D6;       /* Fondo claro general */
+  --bg: #CED2D6;        /* Fondo claro general */
   --surface: #FFFFFF;  /* Tarjetas y contenedores */
   --surface-2: #E2E6E8;/* Superficie secundaria suave */
   --ink: #040A12;      /* Texto principal muy oscuro para gran contraste */
@@ -23,14 +22,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #040A12;       /* Fondo oscuro principal (el más profundo de tu paleta) */
+    --bg: #040A12;        /* Fondo oscuro principal */
     --surface: #0B1D33;  /* Tarjetas en azul noche para destacar sobre el fondo */
-    --surface-2: #122945;/* Elementos internos o estados hover */
-    --ink: #E5F0EE;      /* Texto claro para lectura cómoda */
-    --muted: #CED2D6;    /* Usamos tu gris #CED2D6 perfectamente para textos secundarios y subtítulos */
-    --line: #1E3A5F;     /* Líneas de separación basadas en tu tono azul */
-    --brand: var(--brand-d, #4FD1C0);
-    --brand-ink: var(--brand-d-ink, #072320);
+    --surface-2: #162C4A;/* Superficies internas y botones fantasma con mejor contraste */
+    --ink: #F1F5F9;      /* Texto principal casi blanco para máxima lectura */
+    --muted: #94A3B8;    /* Gris plateado brillante para textos secundarios y subtítulos */
+    --line: #2A4365;     /* Líneas de separación y bordes definidos */
+    --brand: var(--brand-d, #38BDF8); /* Azul brillante para darle vida a los botones y al icono */
+    --brand-ink: var(--brand-d-ink, #0B1D33);
     --ok: #4CC47F;
     --ok-soft: #14301F;
     --warn: #E6A93A;
@@ -42,14 +41,14 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #040A12;       /* Fondo oscuro principal */
+  --bg: #040A12;        /* Fondo oscuro principal */
   --surface: #0B1D33;  /* Tarjetas en azul noche */
-  --surface-2: #122945;/* Elementos internos */
-  --ink: #E5F0EE;      /* Texto claro */
-  --muted: #CED2D6;    /* Tu gris #CED2D6 para subtítulos */
-  --line: #1E3A5F;     /* Líneas y bordes */
-  --brand: var(--brand-d, #4FD1C0);
-  --brand-ink: var(--brand-d-ink, #072320);
+  --surface-2: #162C4A;/* Elementos internos y botones fantasma */
+  --ink: #F1F5F9;      /* Texto claro */
+  --muted: #94A3B8;    /* Gris plateado brillante para subtítulos */
+  --line: #2A4365;     /* Líneas y bordes visibles */
+  --brand: var(--brand-d, #38BDF8); /* Azul brillante para marca / icono */
+  --brand-ink: var(--brand-d-ink, #0B1D33);
   --ok: #4CC47F;
   --ok-soft: #14301F;
   --warn: #E6A93A;
@@ -59,7 +58,7 @@
   color-scheme: dark;
 }
 
-* { box-sizing: border-box; }
+- { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -154,7 +153,7 @@ input[type="range"] { width: 100%; accent-color: var(--brand); height: 32px; mar
 
 .btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--brand); background: var(--brand); color: var(--brand-ink); font-weight: 600; font-size: 15px; text-decoration: none; cursor: pointer; text-align: center; }
 .btn:hover { filter: brightness(1.07); }
-.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn.ghost { background: var(--surface-2); color: var(--ink); border-color: var(--line); }
 .btn.wa { background: #1FA855; border-color: #1FA855; color: #fff; }
 
 /* Semáforo */
@@ -189,7 +188,7 @@ input[type="range"] { width: 100%; accent-color: var(--brand); height: 32px; mar
 .sec-title { font-size: 1rem; margin-bottom: 10px; }
 .chart { width: 100%; height: auto; display: block; }
 .chart .grid { stroke: var(--line); stroke-width: 1; }
-.chart .bar { fill: var(--brand); opacity: 0.85; }
+.chart .bar { fill: var(--brand); opacity: 0.9; } /* Barras con el azul brillante optimizado */
 .chart .line { fill: none; stroke: var(--bad); stroke-width: 2; stroke-linejoin: round; }
 .chart .line2 { fill: none; stroke: var(--warn); stroke-width: 2; stroke-dasharray: 5 4; stroke-linejoin: round; }
 .chart .dot { fill: var(--bad); }
